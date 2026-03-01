@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет по HTTP - u82304</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .student-info {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .screenshot-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .screenshot-header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 1.2em;
+        }
+
+        .screenshot-content {
+            padding: 20px;
+        }
+
+            .screenshot-content img {
+                max-width: 100%;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: transform 0.3s;
+            }
+
+                .screenshot-content img:hover {
+                    transform: scale(1.02);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                }
+
+        .request-details {
+            margin-top: 15px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Отчет по HTTP-запросам</h1>
+
+        <div class="student-info">
+            <strong>Студент:</strong> u82304<br>
+        </div>
+
+        <div class="screenshot-card">
+            <div class="screenshot-header">1. GET главной страницы (HTTP/1.0)</div>
+            <div class="screenshot-content">
+                <img src="screenshots/1.png" alt="GET HTTP/1.0" onclick="window.open(this.src)">
+            </div>
+        </div>
+
+        <div class="screenshot-card">
+            <div class="screenshot-header">2. GET внутренней страницы (HTTP/1.1)</div>
+            <div class="screenshot-content">
+                <img src="screenshots/2.png" alt="GET HTTP/1.1" onclick="window.open(this.src)">
+            </div>
+        </div>
+
+        <div class="screenshot-card">
+            <div class="screenshot-header">3. Размер file.tar.gz</div>
+            <div class="screenshot-content">
+                <img src="screenshots/3.png" alt="HEAD запрос размера" onclick="window.open(this.src)">
+            </div>
+        </div>
+
+        <div class="screenshot-card">
+            <div class="screenshot-header">4. Медиатип image.png</div>
+            <div class="screenshot-content">
+                <img src="screenshots/4.png" alt="HEAD запрос медиатипа" onclick="window.open(this.src)">
+            </div>
+        </div>
+
+        <div class="screenshot-card">
+            <div class="screenshot-header">5. POST комментарий</div>
+            <div class="screenshot-content">
+                <img src="screenshots/5.png" alt="POST запрос" onclick="window.open(this.src)">
+            </div>
+        </div>
+
+        <div class="screenshot-card">
+            <div class="screenshot-header">6. Первые 100 байт file.tar.gz</div>
+            <div class="screenshot-content">
+                <img src="screenshots/6.png" alt="Range запрос" onclick="window.open(this.src)">
+            </div>
+        </div>
+
+        <div class="screenshot-card">
+            <div class="screenshot-header">7. Кодировка index.php</div>
+            <div class="screenshot-content">
+                <img src="screenshots/7.png" alt="HEAD запрос кодировки" onclick="window.open(this.src)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
